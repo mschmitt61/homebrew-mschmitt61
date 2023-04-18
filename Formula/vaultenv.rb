@@ -5,20 +5,20 @@
 class Vaultenv < Formula
   desc "A CLI tool for parsing and exporting vault driven .env files"
   homepage "mschmitt61"
-  version "0.0.11"
+  version "0.0.12"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.11/vaultenv_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b1c2e694262ac2055ae99d36a12e33eb88acb61a638b85a4083afe4543d3786d"
+      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.12/vaultenv_Darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c25b32dab4a6c0a95e13d660cbd0d5d57a8c1639b76d80db3ece31c2fbbf96c0"
 
       def install
         bin.install "vaultenv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.11/vaultenv_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "760041f24d75c1860bdb4c1d4c9e897b64b46202d598dc8bc30325693f24d5f6"
+      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.12/vaultenv_Darwin_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "f55921de78efc27cc263073c3c235594b47e030c0bb97fc548b9457e1db2117b"
 
       def install
         bin.install "vaultenv"
@@ -28,16 +28,16 @@ class Vaultenv < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.11/vaultenv_Linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ac44e085c7b6ceb0f7d1a024722ed316e8fc25626162626d732bd5c69867b1a0"
+      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.12/vaultenv_Linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "3f4d3d533bf989ecbdbe785a8d007a6e6aec9e556952c7a40bca79f4deb95713"
 
       def install
         bin.install "vaultenv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.11/vaultenv_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b153fd2d02fe548fcddd8531dce607eee9d065b405e7a51f5ef7e7546e74fc5c"
+      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.12/vaultenv_Linux_x86_64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8b69654c173ae46eb5df05aa2bfee23ca42879294890fe1cb1b08d8662479a12"
 
       def install
         bin.install "vaultenv"
