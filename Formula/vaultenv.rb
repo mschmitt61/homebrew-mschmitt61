@@ -5,20 +5,20 @@
 class Vaultenv < Formula
   desc ""
   homepage ""
-  version "0.0.22"
+  version "0.0.23"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.22/vaultenv_0.0.22_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7d5e311a2c0ea76a4ed4e7281ecd6dedc298a0e2954adc97877b5185c3894247"
+    if Hardware::CPU.arm?
+      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.23/vaultenv_0.0.23_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "171a978eea6a79b24e10d70e4a55a81c1a3aec519307bab85b52948ddaa99cdf"
 
       def install
         bin.install "vaultenv"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.22/vaultenv_0.0.22_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "d53fb041f83586f25ca19df06946576fdd042dac3b9404ef6151a3ee4e59cd78"
+    if Hardware::CPU.intel?
+      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.23/vaultenv_0.0.23_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "fa0f918fbf46734c9386e16e9595dc77d9ad1b5ae17ed683ef8646bbc3682448"
 
       def install
         bin.install "vaultenv"
@@ -28,16 +28,16 @@ class Vaultenv < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.22/vaultenv_0.0.22_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "5e0a504f471668e2c504f13409c3e8411eb8368d528f4c228463abf8551c8dff"
+      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.23/vaultenv_0.0.23_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "39ef69e06ca69b58d8fcc4862c61b9ce9bf8bc7e1ada97c9bbb53e3c639cd8ef"
 
       def install
         bin.install "vaultenv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.22/vaultenv_0.0.22_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e156c2d2f35ef54d2cde38831440f2264698c7b73753621a7654966cdb2c028b"
+      url "https://github.com/mschmitt61/vaultenv/releases/download/v0.0.23/vaultenv_0.0.23_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "784bf43bb52502865d64cddd02c25f894e7df11a7d8c58ad8e5748324ad5f84b"
 
       def install
         bin.install "vaultenv"
